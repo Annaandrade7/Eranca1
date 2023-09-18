@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Atividade_eranca.Classes
 {
-    internal class ContaEstudante
+    internal class ContaEstudante : Conta
     {
         public double LimitechequeEsp { get; set; } 
         public string Cpf { get; set; }

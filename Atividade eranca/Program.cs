@@ -4,7 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        while (true)
+
+        Conta conta = new Conta();
+        /*while (true)
         {
             Console.WriteLine("Seja bem vida Siceb, sua agencia bancaria favoritinha do Brasil!!");
             Console.WriteLine("Digite 0 caso sua conta for empresarial, digite 1 caso sua conta for Estudantiu ");
@@ -18,7 +20,7 @@ class Program
             {
             
             }  
-        }
+        }*/
 
     }
 }
