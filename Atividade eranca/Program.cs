@@ -58,7 +58,21 @@ class Program
 
                 while(true)
                 {
+                    Console.WriteLine("Digite 1 para sacar" +
+                        "\nDigite 2 para sair");
+                    opcao = Convert.ToInt32(Console.ReadLine());
 
+                    if(opcao == 1 )
+                    {
+                        Console.WriteLine("Digite o valor");
+                        double valor = Convert.ToDouble(Console.ReadLine());
+                        contaest.Saque(valor);
+                        Console.WriteLine($"Novo saldo é de: {contaest.Saldo}");
+                    }
+                    else if(opcao == 2 )
+                    {
+                        break;
+                    }
                 }
             }
             else if( opcao == 3)
