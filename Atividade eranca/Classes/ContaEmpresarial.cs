@@ -38,5 +38,18 @@ namespace Atividade_eranca.Classes
             // base.Saque(valor);  
         }
 
+        public void RealizarEmprestimo(double valor) 
+        { 
+            if(valor <= LimiteEmprestimo - TotalEmprestimo)
+            {
+                Saldo += valor;
+                TotalEmprestimo += valor;
+            }
+            else
+            {
+                Console.WriteLine("Valor indisponivel!");
+            }
+        }
+
     }
 }
