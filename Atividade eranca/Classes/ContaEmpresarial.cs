@@ -23,7 +23,19 @@ namespace Atividade_eranca.Classes
 
         public override void Saque(double valor)
         {
-            base.Saque(valor);  
+            if( valor <= Saldo)
+            {
+                Saldo -= valor;
+                if(valor >= 5000)
+                {
+                    Saldo -= 5;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Saldo Insuficiente!");
+            }
+            // base.Saque(valor);  
         }
 
     }

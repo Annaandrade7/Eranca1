@@ -12,11 +12,25 @@ namespace Atividade_eranca.Classes
         public string Cpf { get; set; }
         public string NomeInstituicao { get; set; }
 
-        public ContaEstudante(double limitechequeEsp, string cpf, string nomeInstituicao)
+        public ContaEstudante(double limitechequeEsp, string cpf, string nomeInstituicao,
+            int nconta, string agencia, string titular, double saldo):
+            base(nconta, agencia, titular, saldo)
         {
             LimitechequeEsp = limitechequeEsp;
             Cpf = cpf;
             NomeInstituicao = nomeInstituicao;
+        }
+
+        public override void Saque(double valor)
+        {
+            if(valor <= Saldo + LimitechequeEsp)
+            {
+                Saldo -= valor;
+            }
+            else
+            {
+                Console.WriteLine("Saldo Insuficiente");
+            }
         }
     }
 }
